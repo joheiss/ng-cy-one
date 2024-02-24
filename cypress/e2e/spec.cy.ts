@@ -22,17 +22,17 @@ describe('User interactions...', () => {
     cy.visit('/');
   });
 
-  it('click on "Logon" in the main toolbar should open the login form', async () => {
+  it('click on "Logon" in the main toolbar should open the login form', () => {
     const loginButton = cy.get("mat-toolbar").contains("Login");
     loginButton.click();
     cy.get('app-login').should('be.visible');
   });
 
-  it('entering the right credentials in the login form should accomplish a successful login', async () => {
+  it('entering the right credentials in the login form should accomplish a successful login', () => {
 
   });
 
-  it('click on "Register" on the login form should open the register form', async () => {
+  it('click on "Register" on the login form should open the register form', () => {
     const loginButton = cy.get("mat-toolbar").contains("Login");
     loginButton.click();
     const registerButton = cy.get('app-login button').contains("Register");
